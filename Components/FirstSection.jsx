@@ -44,11 +44,12 @@ export default function FirstSection() {
 
   const textanimate = {
     whileHover: {
-      scale: 1.08,
+      scale: 0.9,
     },
     transition: {
       type: "spring",
-      stiffness: 250,
+      stiffness: 200,
+      damping: 40,
     },
   };
 
@@ -70,9 +71,9 @@ export default function FirstSection() {
             duration: 0.6,
             ease: "easeOut",
           }}
-          className="font-manrope flex h-50 w-full border-b border-dashed border-neutral-200/30"
+          className="font-manrope flex h-50 max-w-full border-b border-dashed border-neutral-200/30 md:w-full"
         >
-          <div className="group relative flex h-full w-[28%] items-start justify-center overflow-hidden pt-4">
+          <div className="group relative flex h-full w-[28%] items-start justify-center overflow-hidden border-r border-dashed border-neutral-200/30 pt-4">
             <img
               src={image}
               className="size-40 cursor-pointer rounded-full object-cover object-top-right shadow-neutral-50 duration-200 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-orange-500/20 selection:bg-slate-50/70"
@@ -84,12 +85,12 @@ export default function FirstSection() {
             <div className="group:hover-transition-all absolute top-0 right-0 h-px w-[30%] bg-[linear-gradient(180deg,transparent,#f9623f,#ffa93e,#ffc468,#ffd966)] opacity-0 group-hover:opacity-40 group-hover:duration-200"></div>
           </div>
 
-          <div className="flex h-full w-[72%] cursor-pointer flex-col items-center justify-center gap-y-2 border-l border-dashed border-neutral-200/30 px-2 pl-3 ">
+          <div className="flex h-full w-[72%] cursor-pointer flex-col items-center justify-center gap-y-2 bg-[radial-gradient(circle,rgba(255,255,255,0.25)_1px,transparent_1px)] mask-[radial-gradient(ellipse_at_center,black,transparent)] bg-size-[16px_16px] px-2 pl-3">
             <motion.div
               variants={nameanimate}
               whileHover={nameanimate.scale}
               transition={nameanimate.transition}
-              className="font-geist flex w-full items-center justify-start bg-linear-to-t from-neutral-600 via-neutral-300 to-neutral-50 bg-clip-text pt-3 pl-8 text-7xl font-medium text-transparent selection:bg-slate-50/70"
+              className="font-geist z-10 flex w-full items-center justify-start bg-linear-to-b from-neutral-200 via-neutral-100 to-neutral-50 bg-clip-text pt-3 pl-8 text-7xl font-medium text-transparent selection:bg-slate-50/70"
             >
               SHREYAS
             </motion.div>
@@ -97,7 +98,7 @@ export default function FirstSection() {
               variants={nameanimate}
               whileHover={nameanimate.scale}
               transition={nameanimate.transition}
-              className="font-g flex w-full items-center justify-center border-b bg-linear-to-t from-neutral-600/40 via-neutral-300/30 to-neutral-400/20 bg-clip-text pl-16 text-7xl font-medium text-transparent selection:bg-slate-50/70"
+              className="font-g z-10 flex w-full items-center justify-center border-b bg-linear-to-t from-neutral-600/80 via-neutral-300/60 to-neutral-400/40 bg-clip-text pl-16 text-7xl font-medium text-transparent selection:bg-slate-50/70"
             >
               SHUKLA
             </motion.div>
@@ -106,7 +107,7 @@ export default function FirstSection() {
 
         <div className="flex">
           <div className="w-[6%] bg-[repeating-linear-gradient(-45deg,rgba(255,255,255,0.08)_0px,transparent_2px,transparent_7px)]"></div>
-          <motion.div className="ml-1 flex h-10 w-[50%] flex-col items-start justify-center overflow-hidden rounded-2xl border-x border-y border-dashed border-neutral-200/30 p-4 selection:selection:bg-slate-50/70 bg-linear-to-b from-zinc-900 to-zinc-900/40">
+          <motion.div className="ml-1 flex h-10 w-[50%] flex-col items-start justify-center overflow-hidden rounded-2xl border-x border-y border-dashed border-neutral-200/30 bg-linear-to-b from-zinc-900 to-zinc-900/40 p-4 selection:selection:bg-slate-50/70">
             <AnimatePresence mode="wait">
               {/* Only renders words[currentIndex] - ONE word at a time */}
               <motion.div
@@ -125,11 +126,16 @@ export default function FirstSection() {
           <div className="ml-1 flex-1 bg-[repeating-linear-gradient(-45deg,rgba(255,255,255,0.08)_0px,transparent_2px,transparent_7px)]"></div>
         </div>
 
-        <div className="font-inter max-w-full cursor-pointer border-t border-dashed border-neutral-200/30 bg-linear-to-b from-neutral-300 via-neutral-200 to-neutral-100 bg-clip-text p-4 text-[16px] leading-7 font-light tracking-wider text-transparent selection:bg-slate-50/70 ">
-         <div className="font-bold text-lg leading-8">Hii ,I'm Shreyas Shukla- </div> 
-           Front-end  <strong className="font-bold   font-geist bg-linear-to-b from-zinc-900 to-zinc-900/60 rounded-md px-1.5 py-1 text-neutral-50 align-middle  hover:shadow-[0_0_35px_rgba(255,230,246,0.3)]">psychee</strong> crafting creative and functional user interfaces.
-          I’m passionate about front-end development and building modern user
-          experiences. With <></>
+        <div className="font-inter max-w-full cursor-pointer border-t border-dashed border-neutral-200/30 bg-linear-to-b from-neutral-300 via-neutral-200 to-neutral-100 bg-clip-text p-4 text-[16px] leading-7 font-light tracking-wider text-transparent selection:bg-slate-50/70">
+          <div className="text-lg leading-8 font-bold">
+            Hii ,I'm Shreyas Shukla-{" "}
+          </div>
+          Front-end{" "}
+          <strong className="font-geist rounded-md bg-linear-to-b from-zinc-900 to-zinc-900/60 px-1.5 py-1 align-middle font-bold text-neutral-50 hover:shadow-[0_0_35px_rgba(255,230,246,0.3)]">
+            psychee
+          </strong>{" "}
+          crafting creative and functional user interfaces. I’m passionate about
+          front-end development and building modern user experiences. With <></>
           <motion.span
             variants={textanimate}
             whileHover={textanimate.whileHover}

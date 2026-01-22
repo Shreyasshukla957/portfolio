@@ -33,14 +33,12 @@ export default function Connect() {
 
   return (
     <>
-      <div className="flex h-5 w-full flex-col items-start justify-center border-y border-dashed border-y-neutral-100/15 bg-linear-to-b from-zinc-900 to-zinc-900/40 px-5 py-7 md:max-w-3xl">
-        <div className="font-manrope w-45 cursor-pointer border-b border-dashed border-neutral-200/30 text-center text-xl tracking-wide font-light selection:bg-slate-50/70 pb-1 bg-linear-to-t from-neutral-400 via-neutral-200 to-neutral-50 bg-clip-text text-transparent ">
+      <div className="flex h-35 w-full flex-col items-start justify-start border-y border-dashed border-y-neutral-100/15 bg-linear-to-b from-zinc-900 to-zinc-900/40 px-2 py-3 md:max-w-3xl mx-auto mt-4">
+        <div className="font-geist w-full cursor-pointer  text-center text-xl font-medium tracking-wide  selection:bg-slate-50/70 pb-1 bg-linear-to-t from-neutral-400 via-neutral-200 to-neutral-50 bg-clip-text text-transparent h-10 ml-4 flex items-center justify-start mb-1">
           Connect with me
         </div>
-      </div>
-
-      <div className="mt-2 w-full rounded-md border-y border-dashed border-y-neutral-100/15 bg-linear-to-b from-zinc-900 to-zinc-900/40 px-5 py-6 md:max-w-3xl">
-        <div className="flex items-center justify-start gap-x-6">
+         <div className="mt-2 w-full rounded-md  md:max-w-3xl">
+        <div className="flex items-center justify-start gap-x-3 ml-2">
           {socialLinks.map((link) => (
             <a
               key={link.name}
@@ -60,6 +58,9 @@ export default function Connect() {
           ))}
         </div>
       </div>
+      </div>
+
+     
     </>
   );
 }

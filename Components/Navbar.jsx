@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { motion, useScroll, useTransform } from "motion/react";
 import image from "../images/beautiful-anime-character-cartoon-scene.jpg";
+import { FaGithub} from "react-icons/fa";
 
 export default function Navbar() {
   const { scrollYProgress } = useScroll();
@@ -16,30 +17,32 @@ export default function Navbar() {
   return (
     <motion.div
       initial={{
+       scaleX:"50%",
         opacity: 0,
-        y: -32,
+        y: 52,
         filter: "blur(20px)",
       }}
       animate={{
+        scaleX:"100%",
         opacity: 1,
         y: 0,
         filter: "blur(0px)",
       }}
       transition={{
-        duration: 0.8,
+        duration: 0.9,
         ease: "easeOut",
       }}
-      className="font-manrope from-zinc-90/60 sticky top-0 z-10 mb-35 flex h-22 w-full items-center overflow-hidden rounded-lg border border-y-0 border-dashed border-x-white/15 border-y-neutral-100/15 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pb-2 pl-5 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl selection:bg-slate-50/70 md:max-w-[60vw]"
+      className="font-manrope from-zinc-90/60 sticky top-4 z-10 mb-30 flex h-17 w-full items-center overflow-hidden rounded-4xl border border-y-0 border-dashed border-x-white/15 border-y-neutral-100/15 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pb-2 pl-5 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl selection:bg-slate-50/70 md:max-w-[54vw]"
     >
       <div className="flex h-full w-full cursor-pointer items-center justify-between">
-        <div className="w-[20%] lg:w-[50%]">
+        <div className="w-[25%] lg:w-[40%] ">
           <img
             src={image}
-            className="size-13 rounded-lg object-cover object-top-right duration-200 hover:scale-90 hover:shadow-md hover:shadow-orange-500/20"
+            className="size-11 rounded-full object-cover object-top-right duration-200 hover:scale-90 hover:shadow-md hover:shadow-orange-500/20"
           ></img>
         </div>
 
-        <div className="flex flex-1 cursor-pointer items-center justify-center gap-7 text-[rgb(217,217,217)]">
+        <div className="flex flex-1 cursor-pointer items-center justify-center gap-7 text-[rgb(217,217,217)] font-hanken text-md">
           <div className="transition-all duration-200 hover:underline hover:underline-offset-6 hover:[text-shadow:0px_0.3px_1px_rgba(225,225,225,0.4)]">
             Home
           </div>
@@ -50,6 +53,23 @@ export default function Navbar() {
             Projects
           </p>
         </div>
+
+        <motion.div
+        initial={{
+          scale: 1,
+        }}
+        whileHover={{
+          color:"#FF6A00",
+          scale : 1.2,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "linear",
+        }}
+         className="flex items-center justify-center h-full w-15">
+         <a href="https://github.com/Shreyasshukla957/portfolio" target="_blank"><FaGithub size={20}/></a>
+         </motion.div>
+
         <div className="relative flex h-13 w-13 items-center justify-center">
           <svg className="absolute inset-0 -rotate-90" viewBox="0 0 100 100">
  
