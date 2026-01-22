@@ -1,0 +1,31 @@
+@config "../../tailwind.config.js";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+
+@import "tailwindcss";
+
+
+@theme {
+  --text-size: 30px;
+  --font-inter:"Inter",sans-serif;
+  --font-manrope:"Manrope","Inter",sans-serif;
+  --font-roboto:"Roboto","Manrope","Inter",sans-serif;
+  --breakpoint-screen: 640px;
+  /* now this is bydefault by tailwindcss i can override it by changing the value of the --breakpoint-md ex:- --breakpoint-md:850px , now the md:flex-col here the boxes will be aligned vertically when 850px will be the screen size */
+  /* --breakpoint-md:768px; by default */
+  /* --breakpoint-md: 800px; overrided by user(me)  */
+  /* we can do one more thing as well , 3xl brekpoint doesn;t exist so we can create our own */
+  --breakpoint-3xl: 1792px;
+  
+
+  --shadow-aceternity:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+
+    --font-hanken:'Hanken Grotesk';
+    --font-geist:"Geist Mono";
+
+}
