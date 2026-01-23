@@ -22,7 +22,7 @@ export default function Connect() {
     {
       name: "GitHub",
       icon: FaGithub,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Shreyasshukla957",
     },
     {
       name: "LinkedIn",

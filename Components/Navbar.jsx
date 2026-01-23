@@ -29,16 +29,16 @@ export default function Navbar() {
         filter: "blur(0px)",
       }}
       transition={{
-        duration: 0.9,
-        ease: "easeOut",
+        duration: 0.7,
+        ease: "easeInOut",
       }}
-      className="font-manrope from-zinc-90/60 sticky top-4 z-10 mb-30 flex h-17 w-full items-center overflow-hidden rounded-4xl border border-y-0 border-dashed border-x-white/15 border-y-neutral-100/15 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pb-2 pl-5 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl selection:bg-slate-50/70 md:max-w-[54vw]"
+      className="font-manrope from-zinc-90/60 sticky top-4 z-10 mb-30 flex h-17 w-full items-center overflow-hidden rounded-4xl border border-y-0 border-dashed border-x-white/15 border-y-neutral-100/15 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pb-2 pl-5 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl selection:bg-slate-50/70 md:max-w-[50vw]"
     >
       <div className="flex h-full w-full cursor-pointer items-center justify-between">
         <div className="w-[25%] lg:w-[40%] ">
           <img
             src={image}
-            className="size-11 rounded-full object-cover object-top-right duration-200 hover:scale-90 hover:shadow-md hover:shadow-orange-500/20"
+            className="size-10 rounded-full object-cover object-top-right duration-200 hover:scale-90 hover:shadow-md hover:shadow-orange-500/20"
           ></img>
         </div>
 
@@ -74,13 +74,13 @@ export default function Navbar() {
           <svg className="absolute inset-0 -rotate-90" viewBox="0 0 100 100">
  
 
-             {/* animated border  */}
+           
             <motion.circle
               cx="50"
               cy="50"
               r="46"
               fill="none"
-              stroke="#F68B2E"
+              stroke="#FF6A00"
               strokeWidth="2" // thin border
               pathLength="1"
               style={{
@@ -107,7 +107,7 @@ export default function Navbar() {
           </motion.svg>
         </div>
 
-        {/* <motion.div
+        <motion.div
           className=" fixed left-0 top-0 z-50 w-px origin-top h-full bg-linear-to-b from-zinc-200 via-zinc-300 to-zinc-400 overflow-hidden"
           style={{ scaleY: scrollYProgress }}
         ></motion.div>
@@ -115,7 +115,7 @@ export default function Navbar() {
           <motion.div
           className=" fixed right-0 top-0 z-50 w-px origin-top h-full bg-linear-to-b from-zinc-200 via-zinc-300 to-zinc-400 overflow-hidden"
           style={{ scaleY: scrollYProgress }}
-        ></motion.div> */}
+        ></motion.div>
       </div>
     </motion.div>
   );
