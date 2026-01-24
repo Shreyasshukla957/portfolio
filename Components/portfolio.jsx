@@ -4,12 +4,15 @@ import FirstSection from "./FirstSection.jsx";
 import Connect from "./Connect.jsx";
 import Gitgraph from "./gitgraph.jsx";
 import Resume from "./resume.jsx";
+import Time from "./Time.jsx";
+import Day from "./Day.jsx";
 
 export default function Portfolio() {
   return (
-    <motion.div className="mx-auto flex min-h-screen max-w-screen flex-col items-center justify-center bg-[radial-gradient(circle_at_center,oklch(44.2%_0.017_285.786),oklch(14.1%_0.005_285.823))] text-white  ">
-      <div className="fixed top-0 left-0 right-0 h-4 z-10  backdrop-blur-4xl  backdrop-blur-xl  w-3xl  mx-auto"></div>
-      <Navbar />
+    <motion.div className="mx-auto flex min-h-screen max-w-screen flex-col items-center justify-center bg-[radial-gradient(circle_at_center,oklch(44.2%_0.017_285.786),oklch(14.1%_0.005_285.823))] text-white ">
+
+      <div className="w-[99%] h-22 flex sticky top-4 z-10 mb-25 justify-between items-center mx-auto "> <Day/> <Navbar /> <Time/></div>
+      
 
       <motion.div
         initial={{

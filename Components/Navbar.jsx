@@ -32,9 +32,9 @@ export default function Navbar() {
         duration: 0.7,
         ease: "easeInOut",
       }}
-      className="font-manrope from-zinc-90/60 sticky top-4 z-10 mb-30 flex h-17 w-full items-center overflow-hidden rounded-4xl border border-y-0 border-dashed border-x-white/15 border-y-neutral-100/15 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pb-2 pl-5 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl selection:bg-slate-50/70 md:max-w-[50vw]"
+      className="font-manrope from-zinc-90/60   flex h-17 w-full items-center overflow-hidden rounded-4xl border border-y-0 border-dashed border-x-white/15 border-y-neutral-100/15 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pb-2 pl-5 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-3xl selection:bg-slate-50/70 md:max-w-[50vw]"
     >
-      <div className="flex h-full w-full cursor-pointer items-center justify-between">
+      <div className="flex h-full w-full cursor-pointer items-center justify-between ">
         <div className="w-[25%] lg:w-[40%] ">
           <img
             src={image}
