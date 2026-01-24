@@ -11,7 +11,7 @@ export default function Portfolio() {
   return (
     <motion.div className="mx-auto flex min-h-screen max-w-screen flex-col items-center justify-center bg-[radial-gradient(circle_at_center,oklch(44.2%_0.017_285.786),oklch(14.1%_0.005_285.823))] text-white ">
 
-      <div className="w-[99%] h-22 flex sticky top-4 z-10 mb-25 justify-between items-center mx-auto "> <Day/> <Navbar /> <Time/></div>
+      <div className="w-[99%] h-22 flex sticky top-4 z-10 mb-25 lg:justify-between justify-center items-center mx-auto "> <Day/> <Navbar /> <Time/></div>
       
 
       <motion.div

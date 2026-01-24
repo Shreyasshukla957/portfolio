@@ -26,12 +26,9 @@ export default function Time() {
   return (
     <motion.div
       initial={{ translateX: "-30%" }}
-     drag
-     dragConstraints={{ left: -1300, right: 0, top: 0, bottom: 500 }}
-       whileDrag={{ scale: 1.05 }}
-       whileTap={{ cursor: "grabbing" }}
-   
-      className=" from-zinc-90/60 bg-opacity-80 hidde font-techmono z-20 h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-r-0 border-dashed border-y-neutral-100/9 border-l-neutral-100/25 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pr-3 pb-2 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-[100%] selection:bg-slate-50/70 lg:flex"
+
+      
+      className=" from-zinc-90/60 bg-opacity-80 hidde font-techmono z-20 h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-r-0 border-dashed border-y-neutral-100/9 border-l-neutral-100/25 bg-linear-to-b to-zinc-900/80 px-4 pt-2 pr-3 pb-2 text-lg font-extralight shadow-[0px_5px_20px_rgba(0,0,0,0.2)] backdrop-blur-[100%] selection:bg-slate-50/70 hidden lg:flex"
     >
       {time}
     </motion.div>
