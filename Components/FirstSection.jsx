@@ -85,7 +85,7 @@ export default function FirstSection() {
             <div className="group:hover-transition-all absolute top-0 right-0 h-px w-[30%] bg-[linear-gradient(180deg,transparent,#f9623f,#ffa93e,#ffc468,#ffd966)] opacity-0 group-hover:opacity-40 group-hover:duration-200"></div>
           </div>
 
-          <div className="flex h-full w-[72%] cursor-pointer flex-col items-center justify-center gap-y-2 bg-[radial-gradient(circle,rgba(255,255,255,0.25)_1px,transparent_1px)] mask-[radial-gradient(ellipse_at_center,black,transparent)] bg-size-[16px_16px] px-2 pl-3">
+          <div className="flex h-full w-[72%] cursor-pointer flex-col items-center justify-center gap-y-2 bg-[radial-gradient(circle,rgba(255,255,255,0.25)_1px,transparent_0px)] mask-[radial-gradient(ellipse_at_center,black,transparent)] bg-size-[16px_16px] px-2 pl-3">
             <motion.div
               variants={nameanimate}
               whileHover={nameanimate.scale}
